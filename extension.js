@@ -93,7 +93,7 @@
         themeLink: null,
         fbLink: "https://www.facebook.com/groups/zoeiraneverandsplug/",
         youtubeLink: null,
-        website: null,
+        website: "https://8chan.co/exercito/",
         intervalMessages: [],
         messageInterval: 5,
         songstats: false,
