@@ -78,7 +78,7 @@
             ["mix", "Você tocou um mix, é contra as regras da sala. "],
             ["sound", "O video que você tocou tem uma qualidade ruim, ou não tem nada. "],
             ["nsfw", "Esse video contém NSFW (imagem). "],
-            ["unavailable", "O video que você botou não está liberado para alguns usuarios. "]
+            ["bug", "O video que você botou não está liberado para alguns usuarios. "]
         ],
         afkpositionCheck: 15,
         afkRankCheck: "ambassador",
@@ -99,8 +99,8 @@
         songstats: false,
         commandLiteral: "!",
         blacklists: {
-            NSFW: "https://rawgit.com/Yemasthui/basicBot-customization/master/blacklists/ExampleNSFWlist.json",
-            OP: "https://rawgit.com/Yemasthui/basicBot-customization/master/blacklists/ExampleOPlist.json"
+            NSFW: "https://raw.githubusercontent.com/B1G-B0SS/basicBot-customization/master/blacklists/ExampleNSFWlist.json",
+            OP: "https://raw.githubusercontent.com/B1G-B0SS/basicBot-customization/master/blacklists/ExampleOPlist.json"
         }
     }));
 
