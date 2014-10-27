@@ -85,7 +85,7 @@
         motdEnabled: false,
         motdInterval: 5,
         motd: "Bem vindo delicias",
-        filterChat: true,
+        filterChat: false,
         etaRestriction: false,
         welcome: true,
         opLink: null,
