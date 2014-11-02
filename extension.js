@@ -87,7 +87,7 @@
         motd: "Bem vindo delicias",
         filterChat: false,
         etaRestriction: false,
-        welcome: true,
+        welcome: false,
         opLink: null,
         rulesLink: "http://goo.gl/6RP5x1",
         themeLink: null,
