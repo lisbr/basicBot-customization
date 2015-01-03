@@ -53,7 +53,7 @@
     //Change the bots default settings and make sure they are loaded on launch
 
     localStorage.setItem("basicBotsettings", JSON.stringify({
-        botName: "Cursinho de Zoeira",
+        botName: "Professor do Cursinho de Zoeira",
         language: "english",
         chatLink: "https://rawgit.com/B1G-B0SS/basicBot-1/master/lang/en.json",
         maximumAfk: 120,
