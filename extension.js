@@ -54,8 +54,8 @@
 
     localStorage.setItem("basicBotsettings", JSON.stringify({
         botName: "Cursinho de Zoeira",
-        language: "portuguese",
-        chatLink: "https://rawgit.com/Yemasthui/basicBot/master/lang/pt.json",
+        language: "english",
+        chatLink: "https://rawgit.com/B1G-B0SS/basicBot-1/master/lang/en.json",
         maximumAfk: 120,
         afkRemoval: false,
         maximumDc: 60,
@@ -77,8 +77,8 @@
             ["history", "Esse video está no historico. "],
             ["mix", "Você tocou um mix, é contra as regras da sala. "],
             ["sound", "O video que você tocou tem uma qualidade ruim, ou não tem nada. "],
-            ["nsfw", "Esse video contém NSFW (imagem). "],
-            ["bug", "O video que você botou não está liberado para alguns usuarios. "]
+            ["nsfw", "O FILHO DA PUTA, BOTA PUTARIA NA CASA DA TUA MÃE, AQUELA PUTA GORDA DO CACETE, vou pular essa merda. "],
+            ["bug", "O video está bugado, irei pular. "]
         ],
         afkpositionCheck: 15,
         afkRankCheck: "ambassador",
@@ -99,12 +99,12 @@
         songstats: false,
         commandLiteral: "!",
         blacklists: {
-            NSFW: "https://raw.githubusercontent.com/B1G-B0SS/basicBot-customization/master/blacklists/ExampleNSFWlist.json",
-            OP: "https://raw.githubusercontent.com/B1G-B0SS/basicBot-customization/master/blacklists/ExampleOPlist.json"
+            NSFW: "https://rawgit.com/B1G-B0SS/basicBot-customization/master/blacklists/ExampleNSFWlist.json",
+            OP: "https://rawgit.com/B1G-B0SS/basicBot-customization/master/blacklists/ExampleOPlist.json"
         }
     }));
 
     //Start the bot and extend it when it has loaded.
-    $.getScript('https://rawgit.com/Yemasthui/basicBot/master/basicBot.js', extend);
+    $.getScript('https://rawgit.com/B1G-B0SS/basicBot-1/master/basicBot.js', extend);
 
 }).call(this);
