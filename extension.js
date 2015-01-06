@@ -1,1 +1,110 @@
-eval(function(p,a,c,k,e,d){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};while(c--){if(k[c]){p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c])}}return p}('(k(){k p(){g(!D.4){j 1u(p,1*1t)}1s 4=D.4;4.1v();4.q.1w={1y:\'1x\',w:\'1r\',z:\'I\',1q:k(f,B){g(h.z===\'I\'&&f.1k.x!==B.x)j y(0);g(!4.q.1j(h.w,f))j y(0);1i{1l.1m("/1p Tá 1o!?!?!")}}};4.1n()}1z.1A("1M",1L.1K({1N:"1h 1Q 1P 1J 1I",1D:"1C",1B:"7://a.6/8-b/d-1/e/1E/1F.l",1H:1G,1R:2,12:P,N:c,W:2,V:2,S:10,X:c,Y:10,L:c,R:Q,U:2,1g:30,1b:c,1a:3,1c:[["1d","A 9 não 1f 6 o 1e J K. "],["19","18 Z 11 13 14 F 17. "],["16","A 9 uá 1O 2w. "],["C","2Jê v 2I C, é 2H 2K 2L J K. "],["1S","O 9 2N 2Mê v s 2G 2F 2A, 2z não s 2y. "],["2B","O 2C r H, 2E 2D 2P 2O r 2Y MÃE, 2Q H 2S 31 2V, 32 t 2U 2T. "],["2R","O 9 uá 2W, 2Z t. "]],2X:15,2x:"26",25:2,24:5,27:"28 2b 2a",29:2,23:2,22:2,1W:i,1V:"1U://1T.1X/1Y",21:i,20:"7://1Z.2c.6/2d/2q/",2p:i,2o:"7://2r.2s/2v/",2u:[],2t:5,2n:2,2m:"!",m:{2g:"7://a.6/8-b/d-G/e/m/2f.l",F:"7://a.6/8-b/d-G/e/m/2e.l"}}));$.2h(\'7://a.6/8-b/2i-2l/e/d.2k\',p)}).2j(h);',62,189,'||false||bot||com|https|B1G|video|rawgit|B0SS|true|basicBot|master|chat|if|this|null|return|function|json|blacklists|||extend|commands|DA|tem|pular|est|tocou|rank|length|void|type|Esse|cmd|mix|window||OP|customization|PUTA|exact|da|sala|timeGuard||bouncerPlus||60|06|maximumSongLength|maximumLocktime||autodisable|lockGuard|lockdownEnabled|cycleGuard|maximumCycletime|song||is|maximumDc|on|the||history|list|This|op|lockskipPosition|usercommandsEnabled|lockskipReasons|theme|tema|combina|commandCooldown|Professor|else|executable|message|API|sendChat|loadChat|PISTOLA|me|functionality|user|var|1000|setTimeout|retrieveSettings|baconCommand|pistola|command|localStorage|setItem|chatLink|english|language|lang|en|120|maximumAfk|Zoeira|de|stringify|JSON|basicBotsettings|botName|no|Cursinho|do|afkRemoval|sound|goo|http|rulesLink|opLink|gl|6RP5x1|www|fbLink|themeLink|welcome|etaRestriction|motdInterval|motdEnabled|ambassador|motd|Bem|filterChat|delicias|vindo|facebook|groups|ExampleOPlist|ExampleNSFWlist|NSFW|getScript|Exercito|call|js|Bot|commandLiteral|songstats|website|youtubeLink|zoeiraneverandsplug|8chan|co|messageInterval|intervalMessages|exercito|historico|afkRankCheck|nada|ou|ruim|nsfw|FILHO|PUTARIA|BOTA|qualidade|uma|contra|um|Voc|as|regras|voc|que|CASA|NA|AQUELA|bug|GORDA|merda|essa|CACETE|bugado|afkpositionCheck|TUA|irei||DO|vou'.split('|')))
+(function () {
+
+    //Define our function responsible for extending the bot.
+    function extend() {
+        //If the bot hasn't been loaded properly, try again in 1 second(s).
+        if (!window.bot) {
+            return setTimeout(extend, 1 * 1000);
+        }
+
+        //Precaution to make sure it is assigned properly.
+        var bot = window.bot;
+
+        //Load custom settings set below
+        bot.retrieveSettings();
+
+        /*
+         Extend the bot here, either by calling another function or here directly.
+         Model code for a bot command:
+
+         bot.commands.commandCommand = {
+         command: 'cmd',
+         rank: 'user/bouncer/mod/manager',
+         type: 'startsWith/exact',
+         functionality: function(chat, cmd){
+         if(this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
+         if( !bot.commands.executable(this.rank, chat) ) return void (0);
+         else{
+         //Commands functionality goes here.
+         }
+         }
+         }
+
+         */
+
+        bot.commands.baconCommand = {
+            command: 'pistola',  //The command to be called. With the standard command literal this would be: !bacon
+            rank: 'user', //Minimum user permission to use the command
+            type: 'exact', //Specify if it can accept variables or not (if so, these have to be handled yourself through the chat.message
+            functionality: function (chat, cmd) {
+                if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
+                if (!bot.commands.executable(this.rank, chat)) return void (0);
+                else {
+                    API.sendChat("/me Tá PISTOLA!?!?!");
+                }
+            }
+        };
+
+        //Load the chat package again to account for any changes
+        bot.loadChat();
+
+    }
+
+    //Change the bots default settings and make sure they are loaded on launch
+
+    localStorage.setItem("basicBotsettings", JSON.stringify({
+        botName: "Professor do Cursinho de Zoeira",
+        language: "english",
+        chatLink: "https://rawgit.com/B1G-B0SS/basicBot-1/master/lang/en.json",
+        maximumAfk: 120,
+        afkRemoval: false,
+        maximumDc: 60,
+        bouncerPlus: true,
+        lockdownEnabled: false,
+        lockGuard: false,
+        maximumLocktime: 10,
+        cycleGuard: true,
+        maximumCycletime: 10,
+        timeGuard: true,
+        maximumSongLength: 06,
+        autodisable: false,
+        commandCooldown: 30,
+        usercommandsEnabled: true,
+        lockskipPosition: 3,
+        lockskipReasons: [
+            ["theme", "Esse video não combina com o tema da sala. "],
+            ["op", "This song is on the OP list. "],
+            ["history", "Esse video está no historico. "],
+            ["mix", "Você tocou um mix, é contra as regras da sala. "],
+            ["sound", "O video que você tocou tem uma qualidade ruim, ou não tem nada. "],
+            ["nsfw", "O FILHO DA PUTA, BOTA PUTARIA NA CASA DA TUA MÃE, AQUELA PUTA GORDA AFRICANA EBOLENTA, vou pular essa merda. "],
+            ["bug", "O video está bugado, irei pular. "]
+        ],
+        afkpositionCheck: 15,
+        afkRankCheck: "ambassador",
+        motdEnabled: false,
+        motdInterval: 5,
+        motd: "Delicias, lembrem de ler as regras para não levarem ban http://goo.gl/6RP5x1",
+        filterChat: false,
+        etaRestriction: false,
+        welcome: true,
+        opLink: null,
+        rulesLink: "http://goo.gl/6RP5x1",
+        themeLink: null,
+        fbLink: "https://www.facebook.com/groups/zoeiraneverandsplug/",
+        youtubeLink: null,
+        website: "https://8chan.co/exercito/",
+        intervalMessages: [],
+        messageInterval: 5,
+        songstats: false,
+        commandLiteral: "!",
+        blacklists: {
+            NSFW: "https://rawgit.com/B1G-B0SS/basicBot-customization/master/blacklists/ExampleNSFWlist.json",
+            OP: "https://rawgit.com/B1G-B0SS/basicBot-customization/master/blacklists/ExampleOPlist.json"
+        }
+    }));
+
+    //Start the bot and extend it when it has loaded.
+    $.getScript('https://rawgit.com/B1G-B0SS/basicBot-1/master/basicBot.js', extend);
+
+}).call(this);
