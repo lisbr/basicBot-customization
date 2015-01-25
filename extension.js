@@ -57,7 +57,7 @@
         language: "english",
         chatLink: "https://rawgit.com/B1G-B0SS/Exercito-Bot/master/lang/en.json",
         maximumAfk: 60,
-        afkRemoval: true,
+        afkRemoval: false,
         maximumDc: 30,
         bouncerPlus: true,
         lockdownEnabled: false,
