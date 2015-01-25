@@ -56,7 +56,7 @@
         botName: "Professor do Cursinho de Zoeira",
         language: "english",
         chatLink: "https://rawgit.com/B1G-B0SS/basicBot-1/master/lang/en.json",
-        maximumAfk: 120,
+        maximumAfk: 60,
         afkRemoval: false,
         maximumDc: 30,
         bouncerPlus: true,
@@ -92,7 +92,7 @@
         rulesLink: "http://goo.gl/6RP5x1",
         themeLink: null,
         fbLink: "https://www.facebook.com/groups/zoeiraneverandsplug/",
-        youtubeLink: "https://www.youtube.com/channel/UCcL_7zdQqCIkRnzj9z-T4aA",
+        youtubeLink: null
         website: "https://8chan.co/exercito/",
         intervalMessages: [],
         messageInterval: 5,
@@ -105,6 +105,6 @@
     }));
 
     //Start the bot and extend it when it has loaded.
-    $.getScript('https://rawgit.com/B1G-B0SS/basicBot-1/master/basicBot.js', extend);
+    $.getScript('https://rawgit.com/B1G-B0SS/Exercito-Bot/master/basicBot.js', extend);
 
 }).call(this);
