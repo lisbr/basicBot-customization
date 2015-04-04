@@ -1,5 +1,7 @@
 (function () {
-
+    //Link location of your fork so you don't have to modify so many things.
+    var fork = "Yemasthui";
+		
     //Define our function responsible for extending the bot.
     function extend() {
         //If the bot hasn't been loaded properly, try again in 1 second(s).
@@ -55,20 +57,26 @@
     localStorage.setItem("basicBotsettings", JSON.stringify({
         botName: "Professor do Cursinho de Zoeira",
         language: "portuguese",
+        startupCap: 1, // 1-200
+        startupVolume: 0, // 0-100
+        startupEmoji: false, // true or false
         chatLink: "https://rawgit.com/B1G-B0SS/Exercito-Bot/master/lang/pt.json",
         maximumAfk: 60,
         afkRemoval: false,
         maximumDc: 30,
         bouncerPlus: true,
+        blacklistEnabled: true,
         lockdownEnabled: false,
         lockGuard: false,
         maximumLocktime: 10,
         cycleGuard: true,
         maximumCycletime: 10,
+        voteSkip: true,
+        voteSkipLimit: 10,
         timeGuard: true,
         maximumSongLength: 06,
         autodisable: true,
-        commandCooldown: 10,
+        commandCooldown: 30,
         usercommandsEnabled: true,
         lockskipPosition: 3,
         lockskipReasons: [
@@ -89,22 +97,22 @@
         etaRestriction: false,
         welcome: true,
         opLink: null,
-        rulesLink: "http://goo.gl/6RP5x1",
+        rulesLink: null,
         themeLink: null,
-        fbLink: "https://www.fb.com/exercitopdj/",
+        fbLink: null,
         youtubeLink: null,
         website: null,
         intervalMessages: [],
         messageInterval: 5,
-        songstats: false,
+        songstats: true,
         commandLiteral: "!",
         blacklists: {
-            NSFW: "https://rawgit.com/Yemasthui/basicBot-customization/master/blacklists/ExampleNSFWlist.json",
-            OP: "https://rawgit.com/Yemasthui/basicBot-customization/master/blacklists/ExampleOPlist.json"
+            NSFW: "https://rawgit.com/" + fork + "/basicBot-customization/master/blacklists/ExampleNSFWlist.json",
+            OP: "https://rawgit.com/" + fork + "/basicBot-customization/master/blacklists/ExampleOPlist.json"
         }
     }));
 
     //Start the bot and extend it when it has loaded.
-    $.getScript('https://rawgit.com/B1G-B0SS/Exercito-Bot/master/basicBot.js', extend);
+    $.getScript("https://rawgit.com/B1G-B0SS/Exercito-Bot/master/basicBot.js", extend);
 
 }).call(this);
