@@ -75,7 +75,7 @@
         voteSkipLimit: 10,
         timeGuard: true,
         maximumSongLength: 06,
-        autodisable: true,
+        autodisable: false,
         commandCooldown: 30,
         usercommandsEnabled: true,
         lockskipPosition: 3,
@@ -104,7 +104,7 @@
         website: null,
         intervalMessages: [],
         messageInterval: 5,
-        songstats: true,
+        songstats: false,
         commandLiteral: "!",
         blacklists: {
             NSFW: "https://rawgit.com/" + fork + "/basicBot-customization/master/blacklists/ExampleNSFWlist.json",
