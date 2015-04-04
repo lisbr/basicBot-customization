@@ -54,8 +54,8 @@
 
     localStorage.setItem("basicBotsettings", JSON.stringify({
         botName: "Professor do Cursinho de Zoeira",
-        language: "english",
-        chatLink: "https://rawgit.com/B1G-B0SS/Exercito-Bot/master/lang/en.json",
+        language: "portuguese",
+        chatLink: "https://rawgit.com/B1G-B0SS/Exercito-Bot/master/lang/pt.json",
         maximumAfk: 60,
         afkRemoval: false,
         maximumDc: 30,
