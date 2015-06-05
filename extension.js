@@ -35,7 +35,7 @@
          */
 
         bot.commands.baconCommand = {
-            command: ['kaz', 'big'],  //The command to be called. With the standard command literal this would be: !bacon
+            command: ['kaz', 'fu'],  //The command to be called. With the standard command literal this would be: !bacon
             rank: 'user', //Minimum user permission to use the command
             type: 'exact', //Specify if it can accept variables or not (if so, these have to be handled yourself through the chat.message
             functionality: function (chat, cmd) {
@@ -55,12 +55,12 @@
     //Change the bots default settings and make sure they are loaded on launch
 
     localStorage.setItem("basicBotsettings", JSON.stringify({
-        botName: "Professor do Cursinho de Zoeira",
+        botName: "Baladita's Bot",
         language: "portuguese",
         startupCap: 1, // 1-200
         startupVolume: 0, // 0-100
         startupEmoji: true, // true or false
-        chatLink: "https://rawgit.com/B1G-B0SS/Exercito-Bot/master/lang/pt.json",
+        chatLink: "https://rawgit.com/PrincessDie/Baladita-Bot/master/lang/pt.json",
         maximumAfk: 60,
         afkRemoval: false,
         maximumDc: 30,
@@ -97,7 +97,7 @@
         etaRestriction: false,
         welcome: true,
         opLink: null,
-        rulesLink: "http://goo.gl/6RP5x1",
+        rulesLink: "[soon]",
         themeLink: null,
         fbLink: null,
         youtubeLink: null,
@@ -113,6 +113,6 @@
     }));
 
     //Start the bot and extend it when it has loaded.
-    $.getScript("https://rawgit.com/B1G-B0SS/Exercito-Bot/master/basicBot.js", extend);
+    $.getScript("https://rawgit.com/PrincessDie/Baladita-Bot/master/basicBot.js", extend);
 
 }).call(this);
