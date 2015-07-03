@@ -55,12 +55,12 @@
     //Change the bots default settings and make sure they are loaded on launch
 
     localStorage.setItem("basicBotsettings", JSON.stringify({
-        botName: "Baladita's Bot",
+        botName: "David Madsen",
         language: "portuguese",
         startupCap: 1, // 1-200
         startupVolume: 0, // 0-100
         startupEmoji: true, // true or false
-        chatLink: "https://rawgit.com/PrincessDie/Baladita-Bot/master/lang/pt.json",
+        chatLink: "https://rawgit.com/lisbr/david_madsen/master/lang/pt.json",
         maximumAfk: 60,
         afkRemoval: false,
         maximumDc: 30,
@@ -74,7 +74,7 @@
         voteSkip: true,
         voteSkipLimit: 10,
         timeGuard: true,
-        maximumSongLength: 06,
+        maximumSongLength: false,
         autodisable: false,
         commandCooldown: 30,
         usercommandsEnabled: true,
@@ -113,6 +113,6 @@
     }));
 
     //Start the bot and extend it when it has loaded.
-    $.getScript("https://rawgit.com/PrincessDie/Baladita-Bot/master/basicBot.js", extend);
+    $.getScript("https://rawgit.com/lisbr/david_madsen/master/basicBot.js", extend);
 
 }).call(this);
